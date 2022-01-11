@@ -1,0 +1,39 @@
+.nav{
+    position: fixed;
+    top: -20px;
+    width: 100%;
+    display: flex;
+    z-index: 1;
+    height: 125px;
+    justify-content: space-between;
+    transition: 0.6s ease-in;
+}
+.nav_black{
+    background-color: #0F0F0F;
+}
+.logo{
+    width: 250px;
+        margin: -30px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.menu{
+    cursor: pointer;
+   width: 60px;
+   margin-right: 1rem;
+   object-fit: contain;
+}
+@media screen and (min-width:100px) and (max-width:1000px){
+    .nav{
+        /* top: -10px; */
+        height: 100px;
+    }
+    .logo{
+        width: 200px;
+        margin: -20px;
+    }
+    .menu{
+        width: 45px;
+    }
+}

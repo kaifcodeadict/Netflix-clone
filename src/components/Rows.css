@@ -1,0 +1,125 @@
+.row{
+    margin-left: 10px;
+    padding-top: .3rem;
+  }
+ 
+.row_poster {
+  position: relative;
+  object-fit: contain;
+  /* width: 100%; */
+  max-height: 200px;
+  padding: 1rem;
+  transition: transform 500ms;
+  
+}
+
+.row_largeposter{
+  max-height: 400px;
+}
+
+.row_posters {
+  display: flex;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 1.5rem;
+}
+.row_posters::-webkit-scrollbar {
+  display: none;
+}
+.movies:hover .row_poster {
+  opacity: 70%;
+  filter: blur(.5px);
+  transform: scale(1.08);
+}
+.movies:hover .dark-fade{
+  display: flex;
+}
+
+.dark-fade{
+  display: none;
+  height: 11rem;
+  flex-direction: column;
+  position:absolute;
+  width: 100%;
+  bottom: .1rem;
+  padding-bottom: .5rem;
+  padding-left: 1rem;
+  gap: .8rem;
+  transition: .3s;
+  background: linear-gradient(180deg,
+  transparent,
+  rgba(37,37,37,0.61),
+  #111);
+}
+.dark-title{
+  padding-bottom: .8rem;
+  /* opacity: 90%; */
+}
+.dark-descripiton{
+  width: 90%;
+  font-size: 1.1rem;
+  /* opacity: 70%; */
+}
+.dark-rating{
+  font-size: .9rem;
+}
+.movies{
+  position: relative;
+}
+@media screen and (min-width:100px) and (max-width:1000px) {
+  .row_posters{
+    padding: 0.5rem;
+  }
+  .row_poster{
+    max-height: 150px;
+    padding: .8rem;
+  }
+  .row_largeposter{
+    max-height: 300px;
+  }
+  .dark-fade{
+    height: 7rem;
+    padding-left: .7rem;
+    gap: .3rem;
+    padding-bottom: 1rem;
+  }
+  .dark-title{
+    padding-bottom: .2rem;
+    font-size: 1.5rem;
+  }
+  .dark-descripiton{
+    font-size: .8rem;
+  }
+  .dark-rating{
+    font-size: .6rem;
+  }
+}
+@media screen and (min-width:480px) and (max-width:1000px) {
+  .row_posters{
+    padding: 0.8rem;
+  }
+  .row_poster{
+    max-height: 180px;
+    padding: 1rem;
+  }
+  .row_largeposter{
+    max-height: 350px;
+  }
+  .dark-fade{
+    height: 8rem;
+    padding-left: .7rem;
+    gap: .3rem;
+    padding-bottom: 1rem;
+  }
+  .dark-title{
+    padding-bottom: .2rem;
+    font-size: 1.8rem;
+  }
+  .dark-descripiton{
+    font-size: 1rem;
+  }
+  .dark-rating{
+    font-size: .8rem;
+  }
+}
